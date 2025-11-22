@@ -1,0 +1,35 @@
+# Ignore build directories
+x64/
+Debug/
+Release/
+*.ilk
+*.idb
+*.pdb
+*.tlog/
+*.log
+*.recipe
+
+# Ignore Visual Studio intermediate project folders
+x86-to-C.ec9a1d0b/
+
+# Ignore compiled binary files
+*.exe
+*.dll
+*.obj
+*.lib
+
+# Ignore Visual Studio user-specific files
+*.vcxproj.user
+*.suo
+*.cache
+*.opendb
+
+# Ignore temporary files
+*.tmp
+
+# Ignore OneDrive conflict files
+*.lnk
+~$*
+
+# Ignore VS workspace
+.vs/
