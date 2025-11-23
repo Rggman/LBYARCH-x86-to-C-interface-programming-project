@@ -65,6 +65,14 @@ int main() {
         initialize_vector(n, y1);
         initialize_vector(n, y2);
         
+        if (s == 0) {
+            printf("Input Size: %d (2^20)\n", n);
+        } else if (s == 1) {
+            printf("Input Size: %d (2^24)\n", n);
+        } else {
+            printf("Input Size: %d (2^28)\n", n);
+        }
+
         // time C version
         printf("Running C Kernel 30 times...\n");
         clock_t start_c = clock(); // returns # of clock ticks since program started
