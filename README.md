@@ -6,8 +6,7 @@
 3. [Performance Analysis](#performance-analysis)
 4. [Correctness Verification](#correctness-verification)
 5. [Compilation and Execution](#compilation-and-execution)
-6. [Screenshots](#screenshots)
-7. [Video Demonstration](#video-demonstration)
+6. [Video Demonstration](#video-demonstration)
 
 ---
 
