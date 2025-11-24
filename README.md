@@ -94,11 +94,9 @@ void c_kernel(int n, double* x1, double* x2, double* y1, double* y2, double* z) 
 
 ### Execution Results
 
-| Vector Size | Elements | C Kernel (sec) | x86-64 Kernel (sec) | Speedup |
-|------------|----------|----------------|---------------------|---------|
-| 2^20 | 1,048,576 | [C_TIME] | [ASM_TIME] | [SPEEDUP] |
-| 2^24 | 16,777,216 | [C_TIME] | [ASM_TIME] | [SPEEDUP] |
-| 2^28 | 268,435,456 | [C_TIME] | [ASM_TIME] | [SPEEDUP] |
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b78f63b6-2d2c-4b7e-a6b7-524879bd0e36" width="300">
+</p>
 
 *Average of 30 iterations*
 
@@ -187,15 +185,6 @@ The results clearly show that the x86-64 assembly kernel consistently outperform
 - Displays the execution time for each vector size
 - Shows the first 10 elements of the result vector Z for both C and x86-64 implementations
 - Provides a summary of correctness verification
-
----
-
-## Screenshots
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/b78f63b6-2d2c-4b7e-a6b7-524879bd0e36" width="300">
-</p>
-
 
 ---
 
