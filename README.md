@@ -1,14 +1,4 @@
-# Euclidean Distance Calculation - C and x86-64 Assembly
-
-## Project Overview
-This project implements Euclidean distance calculation between coordinate points in both C and x86-64 assembly language, comparing their performance across different vector sizes.
-
-**Distance Formula:** `Z[i] = sqrt((X2[i] - X1[i])^2 + (Y2[i] - Y1[i])^2)`
-- X1, X2, Y1, Y2: coordinate vectors (double-precision float)
-- Z: result vector (double-precision float)
-- n: number of coordinate pairs
-
----
+# C and x86-64 Assembly
 
 ## Table of Contents
 1. [Specifications](#specifications)
