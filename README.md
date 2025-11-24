@@ -19,7 +19,7 @@
 
 ### Input
 - Scalar variable `n` (integer) contains the length of vectors
-- Vectors `X1`, `X2`, `Y1`, `Y2` (double-precision float arrays) and Z are #double-precision float.
+- Vectors `X1`, `X2`, `Y1`, `Y2`  and Z are double-precision float.
 
 ### Process Example
 ```
