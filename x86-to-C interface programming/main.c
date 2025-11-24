@@ -66,11 +66,11 @@ int main() {
         initialize_vector(n, y2);
         
         if (s == 0) {
-            printf("Input Size: 2^20\n", n);
+            printf("Input Size: 2^20\n");
         } else if (s == 1) {
-            printf("Input Size: 2^24\n", n);
+            printf("Input Size: 2^24\n");
         } else {
-            printf("Input Size: 2^28\n", n);
+            printf("Input Size: 2^28\n");
         }
 
         // time C version
