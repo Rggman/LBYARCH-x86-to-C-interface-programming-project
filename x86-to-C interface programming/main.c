@@ -24,7 +24,7 @@ void initialize_vector(int n, double* vector) {
 void display_ten(char* version, double* z) {
     printf("%s first 10 results:\n", version);
     for (int i = 0; i < 10; i++) {
-        printf("Index %d: %.4lf\n", i, z[i]);
+        printf("Index %d: %.15lf\n", i, z[i]);
     }
     printf("\n\n");
 }
