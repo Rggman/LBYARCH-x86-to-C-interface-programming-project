@@ -97,35 +97,10 @@ void c_kernel(int n, double* x1, double* x2, double* y1, double* y2, double* z) 
   <img src="https://github.com/user-attachments/assets/b78f63b6-2d2c-4b7e-a6b7-524879bd0e36" width="300">
 </p>
 
-*Average of 30 iterations*
+#### Key Observations
 
 The results clearly show that the x86-64 assembly kernel consistently outperforms the C kernel for all the vector sizes. This performance gap is to be expected because the assembly version uses instructions and registers that have less instruction overhead and allows more efficiency in performance. Additionally, Assembly is a lower-level language, so it gives you direct control over every register and instruction. Because you can write exactly what the CPU needs without having to add unnecessary extra instructions, you remove the additional tasks that C normally adds. It can also be observed that as vector size increases, the program becomes more memory-bound, or the memory becomes the bottleneck simply because RAM is slower than a CPU.
 ### Performance Analysis
-
-#### Key Observations
-
-1. **Computational Complexity**: The Euclidean distance calculation involves multiple arithmetic operations per element:
-   - 2 subtractions
-   - 2 multiplications
-   - 1 addition
-   - 1 square root
-   
-   This is more compute-intensive than simple DAXPY operations, making assembly optimizations more beneficial.
-
-2. **SIMD Utilization**: The implementation leverages scalar SIMD registers (XMM0, XMM1) with double-precision floating-point instructions (movsd, subsd, mulsd, addsd, sqrtsd) to perform efficient calculations on individual elements.
-
-3. **Memory Access Patterns**: The kernel accesses four input vectors and one output vector sequentially, utilizing spatial locality. The assembly implementation's explicit control over register usage and memory addressing may provide performance advantages over C compiler-generated code, particularly in unoptimized (debug) builds.
-
-4. **Optimization Impact**: 
-   - In **debug mode** (no compiler optimizations), hand-written assembly typically shows measurable performance gains.
-   - In **release mode** (with compiler optimizations), modern C compilers generate highly efficient code that may approach assembly performance.
-
-
-#### Performance Implications
-
-- The sqrt operation is particularly expensive; both implementations benefit from efficient handling of this operation.
-- Vector size scaling shows whether implementations maintain consistent per-element throughput.
-- Cache behavior becomes critical at larger vector sizes (2^28 = ~2GB of data per vector).
 
 ---
 
@@ -188,9 +163,6 @@ The results clearly show that the x86-64 assembly kernel consistently outperform
 ---
 
 ## Video Demonstration
-- Presents execution times for each tested vector size.
-- Shows the first 10 elements of the result vector Z for both C and x86-64 implementations
-- Concludes with a verification summary confirming whether both kernels produce identical results.
 
 
 ---
@@ -202,6 +174,4 @@ The results clearly show that the x86-64 assembly kernel consistently outperform
 - [Microsoft x64 Calling Convention](https://learn.microsoft.com/en-us/cpp/build/x64-calling-convention)
 - [NASM (Netwide Assembler) Documentation](https://www.nasm.us/doc/)
 - [Euclidean Distance - Wikipedia](https://en.wikipedia.org/wiki/Euclidean_distance)
-
----
 
