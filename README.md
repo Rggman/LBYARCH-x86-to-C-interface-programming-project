@@ -1,4 +1,4 @@
-# C and x86-64 Assembly
+# x86-to-C interface programming project
 
 ## Table of Contents
 1. [Specifications](#specifications)
