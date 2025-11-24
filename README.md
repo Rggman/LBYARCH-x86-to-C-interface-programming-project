@@ -227,12 +227,3 @@ The results clearly show that the x86-64 assembly kernel consistently outperform
 
 ---
 
-## Author
-[Your Name]
-
-## Date
-November 24, 2025
-
----
-
-*This project was completed as part of LBYARCH (Low-Level Byte Architecture) course requirements.*
