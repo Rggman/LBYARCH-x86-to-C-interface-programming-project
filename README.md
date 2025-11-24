@@ -112,9 +112,8 @@ void c_kernel(int n, double* x1, double* x2, double* y1, double* y2, double* z) 
 
 *Average of 30 iterations*
 
-### Performance Analysis
-
 The results clearly show that the x86-64 assembly kernel consistently outperforms the C kernel for all the vector sizes. This performance gap is to be expected because the assembly version uses instructions and registers that have less instruction overhead and allows more efficiency in performance. Additionally, Assembly is a lower-level language, so it gives you direct control over every register and instruction. Because you can write exactly what the CPU needs without having to add unnecessary extra instructions, you remove the additional tasks that C normally adds. It can also be observed that as vector size increases, the program becomes more memory-bound, or the memory becomes the bottleneck simply because RAM is slower than a CPU.
+### Performance Analysis
 
 #### Key Observations
 
@@ -133,6 +132,7 @@ The results clearly show that the x86-64 assembly kernel consistently outperform
 4. **Optimization Impact**: 
    - In **debug mode** (no compiler optimizations), hand-written assembly typically shows measurable performance gains.
    - In **release mode** (with compiler optimizations), modern C compilers generate highly efficient code that may approach assembly performance.
+
 
 #### Performance Implications
 
@@ -169,13 +169,13 @@ The results clearly show that the x86-64 assembly kernel consistently outperform
 
 1. Clone the repository:
    ```bash
-   git clone [YOUR_REPOSITORY_URL]
+   git clone https://github.com/Rggman/LBYARCH-x86-to-C-interface-programming-project.git
    cd lbarch-project
    ```
 
 2. Assemble the x86-64 kernel:
    ```bash
-   nasm -f win64 asmfunc.asm -o asmfunc.obj
+   nasm -f win64 asmfunc.asm 
    ```
 
 3. Compile the C code:
@@ -193,31 +193,10 @@ The results clearly show that the x86-64 assembly kernel consistently outperform
    main.exe
    ```
 
-### Build Steps (Visual Studio)
-
-1. Open the Visual Studio solution: `x86-to-C interface programming.sln`
-2. Build solution (Ctrl+Shift+B)
-3. Run (F5 or Ctrl+F5)
-
 ### Expected Output
-```
-Input Size: 2^20
-Running C Kernel 30 times...
-Average C Time: [TIME] seconds
-Running x86-64 Kernel 30 times...
-Average ASM Time: [TIME] seconds
-Correctness Test: PASS
-
-C first 10 results:
-Index 0: [VALUE]
-Index 1: [VALUE]
-...
-
-ASM first 10 results:
-Index 0: [VALUE]
-Index 1: [VALUE]
-...
-```
+- Displays the execution time for each vector size
+- Shows the first 10 elements of the result vector Z for both C and x86-64 implementations
+- Provides a summary of correctness verification
 
 ---
 
@@ -231,46 +210,10 @@ Index 1: [VALUE]
 ---
 
 ## Video Demonstration
+- Presents execution times for each tested vector size.
+- Shows the first 10 elements of the result vector Z for both C and x86-64 implementations
+- Concludes with a verification summary confirming whether both kernels produce identical results.
 
-[Insert your video links below]
-
-### C Implementation
-- **Source Code Review & Compilation**: [VIDEO_LINK]
-- **Execution & Results**: [VIDEO_LINK]
-
-### x86-64 Assembly Implementation
-- **Source Code Review & Compilation**: [VIDEO_LINK]
-- **Execution & Results**: [VIDEO_LINK]
-
-### Full Walkthrough (5-10 minutes)
-- **Complete Demonstration**: [VIDEO_LINK]
-
----
-
-## Project Structure
-
-```
-lbarch-project/
-├── README.md
-├── LBYARCH-x86-to-C-interface-programming-project/
-│   ├── x86-to-C interface programming/
-│   │   ├── main.c                          (C main program)
-│   │   ├── asmfunc.asm                     (x86-64 assembly kernel)
-│   │   ├── run.bat                         (Batch build script)
-│   │   ├── x86-to-C interface programming.sln
-│   │   ├── x86-to-C interface programming.vcxproj
-│   │   └── x86-to-C interface programming.vcxproj.filters
-│   └── .gitignore
-└── screenshots/
-    ├── process_verification.png
-    ├── c_output_2_20.png
-    ├── c_output_2_24.png
-    ├── c_output_2_28.png
-    ├── asm_output_2_20.png
-    ├── asm_output_2_24.png
-    ├── asm_output_2_28.png
-    └── correctness_check.png
-```
 
 ---
 
